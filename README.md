@@ -38,15 +38,34 @@ Aplikasi ini memiliki fitur lengkap mulai dari manajemen pakaian (CRUD) hingga s
 * **Rekomendasi Pakaian:** Fitur yang memberikan inspirasi atau saran kombinasi gaya pakaian berdasarkan isi lemari pengguna.
 * **Canvas Mix & Match:** Ruang kerja virtual (*workspace*) di mana pengguna dapat menarik (*drag/drop* atau memilih) berbagai *item* pakaian untuk melihat kecocokannya secara visual sebelum benar-benar memakainya.
 
-## Teknologi yang Digunakan
+## Teknologi & Arsitektur Sistem
 
-* HTML5
-* Tailwind CSS
-* PHP
-* Laravel Framework (v11)
-* MySQL
-* XAMPP
-* Visual Studio Code
+Aplikasi ini dibangun menggunakan arsitektur **MVC (Model-View-Controller)** dengan rincian teknologi sebagai berikut:
+
+### Frontend (Antarmuka Pengguna)
+* **HTML5 & CSS3:** Struktur dasar halaman web.
+* **Tailwind CSS:** *Utility-first framework* untuk mendesain *user interface* yang responsif, modern, dan rapi.
+* **Blade Templating Engine:** Mesin *template* bawaan Laravel untuk menampilkan data dinamis ke dalam HTML secara efisien.
+
+### Backend (Logika Sistem)
+* **PHP:** Bahasa pemrograman *server-side* utama.
+* **Laravel Framework (v11):** *Framework* andalan yang mengatur *routing*, *controller*, dan struktur keseluruhan aplikasi.
+* **Eloquent ORM:** Sistem pemetaan *database* dari Laravel yang memudahkan interaksi (CRUD) dengan *database* menggunakan model *Object-Oriented*.
+
+### Database & Penyimpanan
+* **MySQL:** Sistem manajemen basis data relasional (RDBMS) untuk menyimpan data pengguna dan pakaian.
+* **Local Storage / Public Disk Laravel:** Digunakan untuk menyimpan *file* gambar pakaian yang diunggah (*upload*) oleh pengguna.
+* **XAMPP:** Paket perangkat lunak penyedia *server* lokal (Apache) dan MySQL.
+
+### Keamanan (Security)
+* **Bcrypt Hashing:** Digunakan untuk mengenkripsi *password* pengguna secara otomatis di *database* sehingga data *login* aman dan tidak bisa dibaca secara langsung.
+* **CSRF Protection:** Perlindungan bawaan Laravel (menggunakan `@csrf`) pada setiap form untuk mencegah serangan *Cross-Site Request Forgery*.
+* **Session-based Authentication:** Sistem autentikasi pengguna untuk memastikan hanya pengguna yang sudah *login* yang bisa mengakses fitur *wardrobe* dan *mix & match*.
+
+### Tools Development
+* **Visual Studio Code:** *Text editor* / IDE utama untuk menulis kode.
+* **Git & GitHub:** Sistem kontrol versi (*Version Control System*) untuk menyimpan repositori dan riwayat perubahan kode.
+* **Composer:** *Package manager* untuk mengelola dependensi (kumpulan *library*) PHP yang dibutuhkan oleh Laravel.
 
 ## Struktur Project
 
@@ -133,3 +152,95 @@ Kolom:
 * created_at
 * updated_at
 
+## Dokumentasi Pengujian
+
+Berikut adalah hasil pengujian antarmuka dan fitur-fitur utama pada aplikasi Match STYLE berdasarkan alur penggunaan sistem:
+
+### 1. Halaman Utama (Landing Page)
+*(Tampilan awal aplikasi saat pertama kali diakses oleh pengunjung sebelum melakukan login)*
+
+![Pengujian Halaman Awal](pengujian-landing-page.png)
+
+---
+
+### 2. Halaman Registrasi
+*(Pengujian proses pembuatan akun baru oleh pengguna dengan mengisi form pendaftaran)*
+
+![Pengujian Halaman Registrasi](pengujian-register.png)
+
+---
+
+### 3. Halaman Login
+*(Pengujian proses autentikasi saat pengguna masuk ke dalam sistem menggunakan akun yang sudah terdaftar)*
+
+![Pengujian Halaman Login](pengujian-login.png)
+
+---
+
+### 4. Halaman Dashboard Utama
+*(Tampilan halaman utama dan navigasi setelah pengguna berhasil login ke dalam sistem)*
+
+![Pengujian Halaman Dashboard](pengujian-dashboard.png)
+
+---
+
+### 5. Halaman Wardrobe (Manajemen Lemari)
+*(Menampilkan daftar koleksi pakaian pengguna yang telah diunggah ke sistem)*
+
+![Pengujian Halaman Wardrobe](pengujian-wardrobe.png)
+
+---
+
+### 6. Fitur Pencarian Nama Pakaian
+*(Pengujian fungsi pencarian spesifik untuk menemukan pakaian berdasarkan nama di dalam daftar koleksi Wardrobe)*
+
+![Pengujian Pencarian Nama](pengujian-search-nama.png)
+
+---
+
+### 7. Fitur Filter Kategori
+*(Pengujian fungsi filter untuk menampilkan koleksi pakaian berdasarkan kategori tertentu, seperti atasan, bawahan, dll)*
+
+![Pengujian Filter Kategori](pengujian-filter-kategori.png)
+
+---
+
+### 8. Fitur Pencarian Rekomendasi
+*(Pengujian fitur pencarian/sistem yang menghasilkan rekomendasi padu padan gaya berdasarkan koleksi yang tersedia)*
+
+![Pengujian Pencarian Rekomendasi](pengujian-search-rekomendasi.png)
+
+---
+
+### 9. Proses Tambah Pakaian (Upload)
+*(Pengujian form input data, validasi kolom, dan keberhasilan upload foto pakaian)*
+
+![Pengujian Tambah Pakaian](pengujian-tambah-baju.png)
+
+---
+
+### 10. Halaman Edit Pakaian
+*(Pengujian fitur untuk memperbarui atau mengubah detail informasi pakaian yang sudah tersimpan)*
+
+![Pengujian Edit Pakaian](pengujian-edit-pakaian.png)
+
+---
+
+### 11. Ruang Canvas Mix & Match
+*(Pengujian interaksi ruang kerja virtual untuk menyusun kombinasi gaya pakaian secara visual)*
+
+![Pengujian Canvas Mix and Match](pengujian-canvas-mix-match.png)
+
+---
+
+### 12. Struktur dan Data Database (Tabel Users)
+*(Menampilkan struktur tabel dan contoh data pengguna yang berhasil tersimpan di dalam tabel `users` pada phpMyAdmin)*
+
+![Pengujian Database Users](pengujian-database-users.png)
+
+---
+
+### 13. Struktur dan Data Database (Tabel Outfits)
+*(Menampilkan struktur tabel dan contoh data pakaian yang berhasil diunggah dan tersimpan ke dalam tabel `outfits` pada phpMyAdmin)*
+
+![Pengujian Database Outfits](pengujian-database-outfits.png)
