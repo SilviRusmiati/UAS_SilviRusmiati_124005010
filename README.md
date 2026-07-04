@@ -1,59 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Match STYLE - Sistem Manajemen Lemari Pakaian
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Identitas Mahasiswa
 
-## About Laravel
+Nama & NIM :
+1. Silvi Rusmiati (124005010)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Deskripsi Aplikasi
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Match STYLE merupakan aplikasi berbasis web yang dibuat menggunakan Framework Laravel, PHP, MySQL, HTML, dan Tailwind CSS. Aplikasi ini membantu pengguna untuk mendigitalkan isi lemari mereka, mencatat koleksi pakaian, dan memudahkan proses *mix & match* pakaian sehari-hari.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Aplikasi ini memiliki fitur:
 
-## Learning Laravel
+* Registrasi Akun
+* Login Pengguna
+* Dashboard User
+* Wardrobe (Melihat koleksi isi lemari)
+* Tambah Pakaian (Upload foto dan detail baju)
+* Logout
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Teknologi yang Digunakan
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* HTML5
+* Tailwind CSS
+* PHP
+* Laravel Framework (v11)
+* MySQL
+* XAMPP
+* Visual Studio Code
 
-## Laravel Sponsors
+## Struktur Project
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Berikut adalah beberapa file utama yang dikembangkan dalam project ini:
 
-### Premium Partners
+* `app/Http/Controllers/OutfitController.php`
+* `app/Models/Outfit.php`
+* `routes/web.php`
+* `resources/views/outfits/create.blade.php`
+* `resources/views/wardrobe.blade.php`
+* `resources/views/dashboard.blade.php`
+* `database/migrations/..._create_outfits_table.php`
+* `.env`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Cara Instalasi dan Menjalankan Aplikasi
 
-## Contributing
+1. Install XAMPP dan Composer.
+2. Jalankan Apache dan MySQL pada aplikasi XAMPP.
+3. Buka terminal/CMD, lalu *clone* repository ini atau *download* sebagai ZIP dan ekstrak di folder komputer.
+4. Buka folder project di Visual Studio Code.
+5. Buka Terminal di VS Code, jalankan perintah `composer install`.
+6. Ubah nama file `.env.example` menjadi `.env`.
+7. Buka phpMyAdmin di browser (`http://localhost/phpmyadmin`).
+8. Buat database baru dengan nama:
+   
+   **match_style_db** *(atau sesuaikan dengan nama database di komputer kamu)*
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+9. Sesuaikan konfigurasi database pada file `.env`:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3308
+DB_DATABASE=uas_outfit
+DB_USERNAME=root
+DB_PASSWORD=
 
-## Code of Conduct
+10. Jalankan migrasi database melalui terminal VS Code dengan perintah: `php artisan migrate`
+11. Jalankan *server* lokal dengan perintah: `php artisan serve`
+12. Buka browser dan akses: `http://127.0.0.1:8000`
+13. Registrasikan akun baru atau login menggunakan akun yang tersedia.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Fitur Sistem
 
-## Security Vulnerabilities
+### Registrasi
+Pengguna dapat membuat akun baru menggunakan nama, email, dan password.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Login
+Pengguna dapat login menggunakan email dan password yang telah didaftarkan.
 
-## License
+### Dashboard
+Menampilkan halaman sambutan dan menu utama untuk pengguna yang sedang login.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Wardrobe
+Menampilkan galeri atau daftar pakaian yang telah diunggah oleh pengguna yang sedang login.
+
+### Tambah Pakaian
+Pengguna dapat mengunggah foto pakaian baru beserta detailnya (nama dan kategori).
+
+### Logout
+Pengguna dapat keluar dari sistem dengan aman menggunakan fitur autentikasi bawaan Laravel.
+
+## Database
+
+Nama Database: 
+**match_style_db** *(atau sesuaikan dengan nama database milikmu)*
+
+Tabel yang digunakan:
+
+**1. users** (Bawaan Laravel)
+Kolom:
+* id
+* name
+* email
+* password
+* created_at
+* updated_at
+
+**2. outfits** (Tabel Kustom)
+Kolom:
+* id
+* user_id (Relasi ke tabel users)
+* name
+* category
+* image
+* created_at
+* updated_at
+
