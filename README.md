@@ -7,16 +7,36 @@ Nama & NIM :
 
 ## Deskripsi Aplikasi
 
-Match STYLE merupakan aplikasi berbasis web yang dibuat menggunakan Framework Laravel, PHP, MySQL, HTML, dan Tailwind CSS. Aplikasi ini membantu pengguna untuk mendigitalkan isi lemari mereka, mencatat koleksi pakaian, dan memudahkan proses *mix & match* pakaian sehari-hari.
+Match STYLE merupakan aplikasi berbasis web yang dibuat menggunakan Framework Laravel, PHP, MySQL, HTML, dan Tailwind CSS. Aplikasi ini tidak hanya membantu pengguna untuk mendigitalkan isi lemari mereka, tetapi juga menyediakan ruang kreatif interaktif untuk merancang gaya pakaian sehari-hari secara virtual.
 
-Aplikasi ini memiliki fitur:
+Aplikasi ini memiliki fitur lengkap mulai dari manajemen pakaian (CRUD) hingga sistem cerdas untuk memadupadankan gaya:
 
-* Registrasi Akun
-* Login Pengguna
-* Dashboard User
-* Wardrobe (Melihat koleksi isi lemari)
-* Tambah Pakaian (Upload foto dan detail baju)
+* Registrasi & Login Pengguna
+* Dashboard User 
+* Wardrobe (Melihat dan mengelola galeri isi lemari)
+* Tambah Pakaian (Upload foto dan detail kategori baju)
+* Edit & Hapus Pakaian (Memperbarui atau menghapus data pakaian dari lemari)
+* Rekomendasi Gaya (Sistem pintar untuk memberikan saran kombinasi pakaian)
+* Canvas Mix & Match (Papan interaktif untuk menyusun dan memvisualisasikan padu padan pakaian secara bebas)
 * Logout
+
+---
+
+## Fitur Sistem (Detail)
+
+### Autentikasi
+* **Registrasi:** Pengguna dapat membuat akun baru menggunakan nama, email, dan password.
+* **Login & Logout:** Akses masuk dan keluar sistem yang aman menggunakan autentikasi bawaan Laravel.
+
+### Manajemen Lemari (Wardrobe)
+* **Lihat Koleksi:** Menampilkan seluruh pakaian yang telah diunggah oleh pengguna dalam bentuk galeri yang rapi.
+* **Tambah Pakaian:** Pengguna dapat mengunggah foto pakaian baru beserta kelengkapan detailnya (seperti nama pakaian dan kategori: atasan, bawahan, dll).
+* **Edit Pakaian:** Pengguna dapat mengubah informasi atau detail pakaian jika terdapat kesalahan pencatatan.
+* **Hapus Pakaian:** Pengguna dapat membuang/menghapus data pakaian yang mungkin sudah tidak dimiliki lagi.
+
+### Fitur Unggulan (Styling)
+* **Rekomendasi Pakaian:** Fitur yang memberikan inspirasi atau saran kombinasi gaya pakaian berdasarkan isi lemari pengguna.
+* **Canvas Mix & Match:** Ruang kerja virtual (*workspace*) di mana pengguna dapat menarik (*drag/drop* atau memilih) berbagai *item* pakaian untuk melihat kecocokannya secara visual sebelum benar-benar memakainya.
 
 ## Teknologi yang Digunakan
 
