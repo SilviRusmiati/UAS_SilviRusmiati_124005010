@@ -159,88 +159,88 @@ Berikut adalah hasil pengujian antarmuka dan fitur-fitur utama pada aplikasi Mat
 ### 1. Halaman Utama (Landing Page)
 *(Tampilan awal aplikasi saat pertama kali diakses oleh pengunjung sebelum melakukan login)*
 
-![Pengujian Halaman Awal](pengujian-landing-page.png)
+![Pengujian Halaman Awal](screenshots/pengujian-landing-page.png)
 
 ---
 
 ### 2. Halaman Registrasi
 *(Pengujian proses pembuatan akun baru oleh pengguna dengan mengisi form pendaftaran)*
 
-![Pengujian Halaman Registrasi](pengujian-register.png)
+![Pengujian Halaman Registrasi](screenshots/pengujian-register.png)
 
 ---
 
 ### 3. Halaman Login
 *(Pengujian proses autentikasi saat pengguna masuk ke dalam sistem menggunakan akun yang sudah terdaftar)*
 
-![Pengujian Halaman Login](pengujian-login.png)
+![Pengujian Halaman Login](screenshots/pengujian-login.png)
 
 ---
 
 ### 4. Halaman Dashboard Utama
 *(Tampilan halaman utama dan navigasi setelah pengguna berhasil login ke dalam sistem)*
 
-![Pengujian Halaman Dashboard](pengujian-dashboard.png)
+![Pengujian Halaman Dashboard](screenshots/pengujian-dashboard.png)
 
 ---
 
 ### 5. Halaman Wardrobe (Manajemen Lemari)
 *(Menampilkan daftar koleksi pakaian pengguna yang telah diunggah ke sistem)*
 
-![Pengujian Halaman Wardrobe](pengujian-wardrobe.png)
+![Pengujian Halaman Wardrobe](screenshots/pengujian-wardrobe.png)
 
 ---
 
 ### 6. Fitur Pencarian Nama Pakaian
 *(Pengujian fungsi pencarian spesifik untuk menemukan pakaian berdasarkan nama di dalam daftar koleksi Wardrobe)*
 
-![Pengujian Pencarian Nama](pengujian-search-nama.png)
+![Pengujian Pencarian Nama](screenshots/pengujian-search-nama.png)
 
 ---
 
 ### 7. Fitur Filter Kategori
 *(Pengujian fungsi filter untuk menampilkan koleksi pakaian berdasarkan kategori tertentu, seperti atasan, bawahan, dll)*
 
-![Pengujian Filter Kategori](pengujian-filter-kategori.png)
+![Pengujian Filter Kategori](screenshots/pengujian-filter-kategori.png)
 
 ---
 
 ### 8. Fitur Pencarian Rekomendasi
 *(Pengujian fitur pencarian/sistem yang menghasilkan rekomendasi padu padan gaya berdasarkan koleksi yang tersedia)*
 
-![Pengujian Pencarian Rekomendasi](pengujian-search-rekomendasi.png)
+![Pengujian Pencarian Rekomendasi](screenshots/pengujian-search-rekomendasi.png)
 
 ---
 
 ### 9. Proses Tambah Pakaian (Upload)
 *(Pengujian form input data, validasi kolom, dan keberhasilan upload foto pakaian)*
 
-![Pengujian Tambah Pakaian](pengujian-tambah-baju.png)
+![Pengujian Tambah Pakaian](screenshots/pengujian-tambah-baju.png)
 
 ---
 
 ### 10. Halaman Edit Pakaian
 *(Pengujian fitur untuk memperbarui atau mengubah detail informasi pakaian yang sudah tersimpan)*
 
-![Pengujian Edit Pakaian](pengujian-edit-pakaian.png)
+![Pengujian Edit Pakaian](screenshots/pengujian-edit-pakaian.png)
 
 ---
 
 ### 11. Ruang Canvas Mix & Match
 *(Pengujian interaksi ruang kerja virtual untuk menyusun kombinasi gaya pakaian secara visual)*
 
-![Pengujian Canvas Mix and Match](pengujian-canvas-mix-match.png)
+![Pengujian Canvas Mix and Match](screenshots/pengujian-canvas-mix-match.png)
 
 ---
 
 ### 12. Struktur dan Data Database (Tabel Users)
 *(Menampilkan struktur tabel dan contoh data pengguna yang berhasil tersimpan di dalam tabel `users` pada phpMyAdmin)*
 
-![Pengujian Database Users](pengujian-database-users.png)
+![Pengujian Database Users](screenshots/pengujian-database-users.png)
 
 ---
 
 ### 13. Struktur dan Data Database (Tabel Outfits)
 *(Menampilkan struktur tabel dan contoh data pakaian yang berhasil diunggah dan tersimpan ke dalam tabel `outfits` pada phpMyAdmin)*
 
-![Pengujian Database Outfits](pengujian-database-outfits.png)
+![Pengujian Database Outfits](screenshots/pengujian-database-outfits.png)
